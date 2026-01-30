@@ -13,11 +13,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
         val settingsCard: CardView = findViewById(R.id.cvSettings)
+        val mediaCard: CardView = findViewById(R.id.cvMedia)
+        val searchCard: CardView = findViewById(R.id.cvSearch)
         settingsCard.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
 
+        }
+        mediaCard.setOnClickListener {
+            val intent = Intent(this, MediaLibraryActivity::class.java)
+            startActivity(intent)
+        }
+        searchCard.setOnClickListener {
+
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
         }
 
     }
