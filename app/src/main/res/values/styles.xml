@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.App.CardButton" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/on_card</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/ys_text_medium</item>
+
+    </style>
+    <style name="Widget.AppCompat.TextView.TitleOnPrimary" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/on_primary</item>
+         <item name="android:fontFamily">@font/ys_text_medium</item>
+
+    </style>
+
+    <style name="TextAppearance.App.ScreenTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/ys_text_medium</item>
+
+    </style>
+
+    <style name="TextAppearance.App.SettingsRow" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+
+    </style>
+
+    <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/corner_radius_large</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@color/card_background_on_primary</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="Widget.App.CardView.MainButton" parent="Widget.App.CardView" />
+</resources>
