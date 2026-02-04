@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="TextAppearance.App.CardButton" parent="TextAppearance.AppCompat">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/on_card</item>
@@ -7,10 +8,11 @@
         <item name="android:fontFamily">@font/ys_text_medium</item>
 
     </style>
+
     <style name="Widget.AppCompat.TextView.TitleOnPrimary" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/on_primary</item>
-         <item name="android:fontFamily">@font/ys_text_medium</item>
+        <item name="android:fontFamily">@font/ys_text_medium</item>
 
     </style>
 
@@ -36,5 +38,26 @@
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
     </style>
+
     <style name="Widget.App.CardView.MainButton" parent="Widget.App.CardView" />
+    <!-- Стиль для поля ввода поисковой строки -->
+    <style name="Widget.App.EditText.Search" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/spacing_medium</item>
+        <item name="android:layout_marginEnd">@dimen/spacing_medium</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:hint">@string/title_search</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:inputType">text</item>
+        <item name="fontFamily">@font/ys_text_regular</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/search_tint</item>
+    </style>
+
+
 </resources>

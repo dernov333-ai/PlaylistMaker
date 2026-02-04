@@ -22,11 +22,13 @@ class SettingsActivity : AppCompatActivity() {
             insets
         }
         val back: ImageView = findViewById(R.id.iwBack)
+
         back.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 finish()
             }
         })
+
         findViewById<ConstraintLayout>(R.id.rowShare).setOnClickListener {
             shareApp()
         }
