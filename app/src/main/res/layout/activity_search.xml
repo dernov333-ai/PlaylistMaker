@@ -34,8 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_large"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/corner_radius_medium"
+        app:cardElevation="@dimen/card_elevation_small"
         android:layout_marginHorizontal="@dimen/spacing_large"
         app:cardUseCompatPadding="true">
 

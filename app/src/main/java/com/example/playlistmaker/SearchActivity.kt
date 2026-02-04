@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class SearchActivity : AppCompatActivity() {
+    var searchText: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +44,8 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                clearButton.visibility = if (s.isNullOrEmpty()) View.GONE else View.VISIBLE
+                searchText = s?.toString() ?: ""
+                clearButton.visibility = if (searchText.isEmpty()) View.GONE else View.VISIBLE
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -53,6 +55,7 @@ class SearchActivity : AppCompatActivity() {
 
         clearButton.setOnClickListener {
             searchEditText.setText("")
+            searchText = ""
             searchEditText.clearFocus()
             hideKeyboard(searchEditText)
             clearButton.visibility = View.GONE
@@ -63,4 +66,25 @@ class SearchActivity : AppCompatActivity() {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
         imm?.hideSoftInputFromWindow(view.windowToken, 0)
     }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Сохраняем текущий текст поискового запроса
+        outState.putString(KEY_SEARCH_TEXT, searchText)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        // Восстанавливаем сохранённый текст и устанавливаем его в EditText
+        val restoredText = savedInstanceState.getString(KEY_SEARCH_TEXT, "")
+        searchText = restoredText
+
+        val searchEditText: EditText = findViewById(R.id.etSearch)
+        searchEditText.setText(restoredText)
+        // Кнопка очистки обновится автоматически через TextWatcher
+    }
+    companion object {
+        private const val KEY_SEARCH_TEXT = "KEY_SEARCH_TEXT"
+    }
+
+
 }
