@@ -7,5 +7,7 @@
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="corner_radius_medium">8dp</dimen>
     <dimen name="card_elevation_small">2dp</dimen>
-
+    <dimen name="track_item_size">64dp</dimen>
+    <dimen name="track_artwork_size">48dp</dimen>
+    <dimen name="track_artwork_corner_radius">2dp</dimen>
 </resources>

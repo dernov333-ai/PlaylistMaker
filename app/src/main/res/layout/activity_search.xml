@@ -72,6 +72,14 @@
 
         </LinearLayout>
 
+
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrackList"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

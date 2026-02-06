@@ -12,6 +12,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.playlistmaker.MockTracks.mockTracks
 
 class SearchActivity : AppCompatActivity() {
     var searchText: String = ""
@@ -59,7 +62,13 @@ class SearchActivity : AppCompatActivity() {
             searchEditText.clearFocus()
             hideKeyboard(searchEditText)
             clearButton.visibility = View.GONE
+
         }
+        val tracksRecycler: RecyclerView = findViewById(R.id.rvTrackList)
+
+        val trackAdapter = TrackAdapter(mockTracks())
+        tracksRecycler.layoutManager = LinearLayoutManager(this)
+        tracksRecycler.adapter = trackAdapter
     }
 
     private fun hideKeyboard(view: View) {

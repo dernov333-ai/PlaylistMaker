@@ -14,4 +14,5 @@
     <color name="icon_secondary">#757575</color>
     <color name="icon_nav">#FF000000</color>
     <color name="search_tint">#AEAFB4</color>
+    <color name="track_artist">#AEAFB4</color>
 </resources>
