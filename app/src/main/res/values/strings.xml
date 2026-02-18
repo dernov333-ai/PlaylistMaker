@@ -15,4 +15,10 @@
     <string name="support_email">dernov333@yandex.ru</string>
     <string name="email_subject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
     <string name="email_body">Спасибо разработчикам и разработчицам за крутое приложение!</string>
+    <string name="search_empty_message">Ничего не нашлось</string>
+    <string name="search_error_message">Проблемы со связью</string>
+    <string name="search_error_details">Загрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="search_button_retry">Обновить</string>
+
+
 </resources>
