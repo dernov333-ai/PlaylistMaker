@@ -84,15 +84,15 @@
     <style name="Widget.App.PlaceholderContainer" parent="">
         <item name="android:gravity">top|center_horizontal</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:paddingTop">256dp</item>
+        <item name="android:paddingTop">@dimen/place_holder_top_padding</item>
     </style>
 
     <!-- Стиль для кнопки «Обновить» в плейсхолдере ошибки -->
     <style name="Widget.App.PlaceholderButton" parent="Widget.MaterialComponents.Button">
         <item name="android:textAllCaps">false</item>
         <item name="cornerRadius">64dp</item>
-        <item name="android:backgroundTint">@color/card_background_on_primary</item>
-        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:backgroundTint">@color/on_surface</item>
+        <item name="android:textColor">@color/surface</item>
     </style>
 
 </resources>

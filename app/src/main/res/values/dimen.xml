@@ -10,4 +10,5 @@
     <dimen name="track_item_size">64dp</dimen>
     <dimen name="track_artwork_size">48dp</dimen>
     <dimen name="track_artwork_corner_radius">2dp</dimen>
+    <dimen name="place_holder_top_padding">128dp</dimen>
 </resources>
